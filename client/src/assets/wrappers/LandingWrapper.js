@@ -1,57 +1,64 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.main`
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  column-gap: 1rem;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr;
 
-  nav {
-    color: var(--primary-400);
-    padding: var(--padding-100);
-    background-color: var(--primary-400);
-    color: var(--white);
-    font-weight: var(--fw-700);
-    font-size: var(--fs-600);
-    box-shadow: var(--shadow);
-  }
+	nav {
+		display: flex;
+		align-items: center;
+		color: var(--primary-400);
+		padding: var(--padding-100) var(--padding-150);
+		color: var(--primary-400);
+		font-weight: var(--fw-700);
+		font-size: var(--fs-600);
+	}
 
-  section {
-    display: grid;
-    place-items: center;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
-    padding-inline: 1rem;
-    /* max-width: 1100px; */
-    margin: 0 auto;
-    width: 100%;
-  }
+	nav img {
+		max-width: 100px;
+		cursor: pointer;
+	}
 
-  form {
-    text-align: center;
-    display: grid;
-    gap: 1rem;
-  }
+	section {
+		display: grid;
+		place-items: center;
+		gap: 1rem;
+		grid-template-columns: 1fr 2fr;
+		padding-inline: 3rem;
+		margin: 0 auto;
+		width: 100%;
+	}
 
-  .login {
-    padding: 4rem;
-    border-radius: var(--borderRadiusMd);
-    box-shadow: var(--shadow), var(--shadow), var(--shadow), var(--shadow);
-  }
+	form {
+		text-align: center;
+		display: grid;
+		gap: 1rem;
+	}
 
-  .login h2 {
-    font-size: var(--fs-600);
-  }
+	form h2 {
+		margin-bottom: 2rem;
+	}
 
-  .logo-container {
-    justify-self: start;
-  }
-  
-  .logo {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 500px;
-  }
+	.login {
+		padding: 6rem 4rem;
+		box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+		border-radius: 1rem;
+		align-items: flex-start;
+	}
+
+	.login h2 {
+		font-size: var(--fs-600);
+	}
+
+	.logo-container {
+		justify-self: start;
+	}
+
+	.landing-img {
+		width: 80%;
+		margin: 0 auto;
+	}
 `;
 
 export default Wrapper;
