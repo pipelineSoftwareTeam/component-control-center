@@ -1,7 +1,7 @@
-import logo from '../assets/images/logo-animate.svg'
+import logo from '../assets/images/brand-logo.png';
 
 function Logo() {
-  return <img src={logo} className='logo' alt='c3-logo' />
+	return <img src={logo} alt='c3-logo' />;
 }
 
 export default Logo;
