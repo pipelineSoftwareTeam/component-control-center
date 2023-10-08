@@ -1,0 +1,123 @@
+{
+  "machines": [
+    {
+      "workCentre": "MAM72-01",
+      "machineModel": "MAM72-35V",
+      "serialNumber": 30001,
+      "manufacturer": "Matsuura",
+      "machineType": "CNC 5 Axis Multi Pallet Milling Machine",
+      "noOfPallets": 32,
+      "image": "https://www.matsuura.co.jp/english/main/wp-content/uploads/2019/08/MAM72-35V-4.jpg",
+      "nextService": "01/12/2023",
+      "notes": "",
+      "components": [
+        {
+          "partNumber": "1A001-0101",
+          "partName": "Bracket 5 Axis",
+          "partsPerYear": 100,
+          "status": "Proven",
+          "handed": false,
+          "partsPerBillet": 1,
+          "typicalBatchSize": 20,
+          "material": {
+            "billetNumber": "AB2100",
+            "spec": "L168",
+            "size": {
+              "grip": 25.4,
+              "height": 50.8,
+              "width": 100
+            },
+            "notes": ""
+          },
+          "operations": [
+            {
+              "opNumber": 1,
+              "programNumber": 1001,
+              "runTime": 45,
+              "partsPerRun": 1,
+              "workholding": "Makrogrip 77 Vice",
+              "fixtures": ["ST21804"]
+            }
+          ]
+        },
+        {
+          "partNumber": "1A001-0101",
+          "partName": "Bracket 5 Axis",
+          "partsPerYear": 100,
+          "status": "Proven",
+          "handed": false,
+          "partsPerBillet": 1,
+          "typicalBatchSize": 20,
+          "material": {
+            "billetNumber": "AB2100",
+            "spec": "L168",
+            "size": {
+              "grip": 25.4,
+              "height": 50.8,
+              "width": 100
+            },
+            "notes": ""
+          },
+          "operations": [
+            {
+              "opNumber": 1,
+              "programNumber": 1001,
+              "runTime": 45,
+              "partsPerRun": 1,
+              "workholding": "Makrogrip 77 Vice",
+              "fixtures": ["ST21804"]
+            },
+            {
+              "opNumber": 1,
+              "programNumber": 1001,
+              "runTime": 45,
+              "partsPerRun": 1,
+              "workholding": "Makrogrip 77 Vice",
+              "fixtures": ["ST21804"]
+            }
+          ]
+        },
+        {
+          "partNumber": "1A001-0101",
+          "partName": "Bracket 5 Axis",
+          "partsPerYear": 100,
+          "status": "Proven",
+          "handed": false,
+          "partsPerBillet": 1,
+          "typicalBatchSize": 20,
+          "material": {
+            "billetNumber": "AB2100",
+            "spec": "L168",
+            "size": {
+              "grip": 25.4,
+              "height": 50.8,
+              "width": 100
+            },
+            "notes": ""
+          },
+          "operations": [
+            {
+              "opNumber": 1,
+              "programNumber": 1001,
+              "runTime": 45,
+              "partsPerRun": 1,
+              "workholding": "Makrogrip 77 Vice",
+              "fixtures": ["ST21804"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workCentre": "MAM72-02",
+      "machineModel": "MAM72-35V",
+      "serialNumber": 30002,
+      "manufacturer": "Matsuura",
+      "machineType": "CNC 5 Axis Multi Pallet Milling Machine",
+      "noOfPallets": 32,
+      "image": "https://www.matsuura.co.jp/english/main/wp-content/uploads/2019/08/MAM72-35V-4.jpg",
+      "nextService": "01/12/2023",
+      "notes": ""
+    }
+  ]
+}
