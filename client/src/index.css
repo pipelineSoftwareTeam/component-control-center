@@ -100,7 +100,7 @@ button {
 	appearance: none;
 	border: none;
 	border-radius: var(--borderRadius);
-	padding: 0.25rem;
+	padding: 0.25rem 1rem;
 	outline: transparent;
 	background-color: var(--primary-400);
 	color: var(--white);
@@ -125,4 +125,15 @@ input:focus-visible {
 	appearance: none;
 	outline: none;
 	border-color: var(--primary-400);
+}
+
+/* Utilities */
+
+.full-page-centre {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }

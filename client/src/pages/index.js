@@ -1,4 +1,4 @@
-import Landing from "./Landing";
-import NotFound from "./NotFound";
+import Landing from './Landing';
+import NotFound from './NotFound';
 
 export { Landing, NotFound };
