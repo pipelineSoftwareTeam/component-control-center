@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Component Imports
-import { Landing, NotFound } from './pages';
+import { Landing, NotFound } from './pages';;
 import {
 	SharedLayout,
 	Dashboard,
