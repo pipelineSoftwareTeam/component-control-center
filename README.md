@@ -21,7 +21,7 @@ npm run dev
 ## Authors
 
 👤 **Rikie Patrick**
-* Github: [@1sAndZeroes](https://github.com/1sAndZeroes)
+* Github: [@1sAndZeros](https://github.com/1sAndZeros)
 
 👤 **Oliver Jones**
 * Github: [@ojones44](https://github.com/ojones44)
