@@ -2,7 +2,7 @@
 import mongoose, { Schema } from 'mongoose';
 
 // Data types import
-import { requiredString, requiredNumber } from './dataModels';
+import { requiredString, requiredNumber } from './dataModels.js';
 
 const machineModel = {
 	workCenter: requiredString,

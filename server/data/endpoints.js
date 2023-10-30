@@ -1,6 +1,6 @@
 const endpoints = {
 	auth: '/api/auth/',
-	machine: '/api/machine/',
+	machine: '/api/machines/',
 	component: '/api/component/',
 };
 

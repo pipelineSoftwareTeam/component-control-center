@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 
 // Database
-// import connectDB from './connect/db.js';
+import connectDB from './connect/db.js';
 
 // Routes
 import endpoint from './data/endpoints.js';
@@ -19,7 +19,7 @@ import componentRoutes from './routes/componentRoutes.js';
 
 dotenv.config();
 
-// connectDB();
+connectDB();
 
 const app = express();
 

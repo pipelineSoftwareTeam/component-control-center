@@ -3,13 +3,13 @@ import { FiXCircle } from 'react-icons/fi';
 
 function MachineModal({ setModalOpen }) {
   const [formData, setFormData] = useState({
-    workCentre: '',
+    workCenter: '',
     machineModel: '',
-    serialNo: 10000,
+    serialNumber: 10000,
     manufacturer: 'Matsuura',
     machineType: 'CNC 5 Axis Multi Pallet Milling Machine',
     noOfPallets: 32,
-    nextService: null,
+    nextService: new Date().toISOString().split('T')[0],
     notes: '',
   });
 
@@ -20,26 +20,15 @@ function MachineModal({ setModalOpen }) {
     }));
   }
 
-  function handleDateChange(e) {
-    setFormData((prevValues) => ({
-      ...prevValues,
-      [e.target.name]: e.target.valueAsDate,
-    }));
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
-    const data = {
-      ...formData,
-      nextService: formData.nextService.toLocaleDateString('en-GB'),
-    };
 
-    fetch('http://localhost:5000/', {
+    fetch('/api/machines', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(formData),
     })
       .then((res) => {
         if (res.ok) {
@@ -57,8 +46,8 @@ function MachineModal({ setModalOpen }) {
         <FiXCircle className='close-icon' onClick={() => setModalOpen(false)} />
         <h2>Add New Machine</h2>
         <input
-          value={formData.workCentre}
-          name='workCentre'
+          value={formData.workCenter}
+          name='workCenter'
           onChange={handleValueChange}
           type='text'
           placeholder='Work Centre e.g. MAM72-01'
@@ -73,8 +62,8 @@ function MachineModal({ setModalOpen }) {
           required
         />
         <input
-          value={formData.serialNo}
-          name='serialNo'
+          value={formData.serialNumber}
+          name='serialNumber'
           onChange={handleValueChange}
           type='number'
           placeholder='Serial Number'
@@ -107,7 +96,7 @@ function MachineModal({ setModalOpen }) {
         <input
           valueasdate={formData.nextService}
           name='nextService'
-          onChange={handleDateChange}
+          onChange={handleValueChange}
           type='date'
         />
         <input
