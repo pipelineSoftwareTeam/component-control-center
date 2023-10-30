@@ -6,7 +6,7 @@ import HTTP_STATUS from '../data/httpStatus.js';
 // import jwt from 'jsonwebtoken';
 
 // Database
-// import Machine from '../models/machineModel.js'
+import Machine from '../models/machineModel.js';
 import images from '../data/images.js';
 
 // Helper functions
@@ -14,45 +14,40 @@ import images from '../data/images.js';
 // Managing machine data
 
 // @description   Get all Machines
-// @route         GET /api/Machine/
+// @route         GET /api/machines/
 // @access        Private
 const getMachines = asyncHandler(async (req, res) => {
-	res.send('Get all Machines route');
+	try {
+		const machines = await Machine.find();
+		res.send(machines);
+	} catch (error) {
+		res.status(HTTP_STATUS.BAD);
+		res.json({ message: `Process ended with error ${error.message}` });
+	}
 });
 
 // @description   Get Machine by ID
-// @route         GET /api/Machine/:id
+// @route         GET /api/machines/:id
 // @access        Private
 const getMachineById = asyncHandler(async (req, res) => {
 	res.send('Get machine by ID route');
 });
 
 // @description   Add Machine
-// @route         POST /api/Machine/
+// @route         POST /api/machines/
 // @access        Public
 const addMachine = asyncHandler(async (req, res, next) => {
 	try {
-		const {
-			workCenter,
-			machineModel,
-			serialNumber,
-			manufacturer,
-			machineType,
-			noOfPallets,
-			nextService,
-			notes,
-		} = req.body;
-
 		const newMachine = await Machine.create({
-			workCenter: workCenter,
-			machineModel: machineModel,
-			serialNumber: serialNumber,
-			manufacturer: manufacturer,
-			machineType: machineType,
-			noOfPallets: noOfPallets,
-			image: images[machineModel],
-			nextService: nextService,
-			notes: notes,
+			workCenter: req.body.workCenter,
+			machineModel: req.body.machineModel,
+			serialNumber: req.body.serialNumber,
+			manufacturer: req.body.manufacturer,
+			machineType: req.body.machineType,
+			noOfPallets: req.body.noOfPallets,
+			image: images[req.body.machineModel],
+			nextService: req.body.nextService,
+			notes: req.body.notes,
 			components: [],
 		});
 
@@ -75,14 +70,14 @@ const addMachine = asyncHandler(async (req, res, next) => {
 });
 
 // @description   Update Machine
-// @route         PUT /api/Machine/:id
+// @route         PUT /api/Machines/:id
 // @access        Public
 const updateMachine = asyncHandler(async (req, res, next) => {
 	res.send('Update Machine route');
 });
 
 // @description   Update Machine
-// @route         DELETE /api/Machine/:id
+// @route         DELETE /api/Machines/:id
 // @access        Public
 const deleteMachine = asyncHandler(async (req, res, next) => {
 	res.send('Delete Machine route');
